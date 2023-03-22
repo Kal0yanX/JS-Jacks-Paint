@@ -4,8 +4,8 @@ function configureListeners() {
 
 
     for (var i = 0; i < images.length; i++) {
-        document.getElementById(images[i].id).addEventListener('mouseover', add0opacity, false)
-        document.getElementById(images[i].id).addEventListener('mouseover', remove0opacity, false)
+        document.getElementById(images[i].id).addEventListener('mouseover', addOpacity, false)
+        document.getElementById(images[i].id).addEventListener('mouseover', removeOpacity, false)
           // do something when the mouse is over the image
     }
 }
@@ -84,10 +84,12 @@ function getProductInfo(paintColor) {
 
     function updatePrice(colorName, price)
     {       
-        let colorPrice = document.querySelector(price)// select element with corresponding id
+        let colorPrice = document.querySelector(price);
+        colorPrice.textContent = price;// select element with corresponding id
         // display price
         
-        let color = document.querySelector(colorName)// select element with corresponding id
+        let color = document.querySelector(colorName);
+        color.textContent = colorName;// select element with corresponding id
         //display color name
     }
     
